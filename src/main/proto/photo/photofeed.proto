@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.photo";
+option java_outer_classname = "FlickrPhotoProto";
+
+package photo;
+
+service PhotoService {
+    rpc GetPublicPhotos (PhotoSearchRequest) returns (PhotoResult) {}
+}
+
+message PhotoSearchRequest {
+    string tags = 1;
+}
+
+message PhotoResult {
+    string title = 1;
+    repeated Photo photos = 2;
+}
+
+message Photo {
+    string title = 1;
+    string description = 2;
+    string author = 3;
+    string url = 4;
+}
