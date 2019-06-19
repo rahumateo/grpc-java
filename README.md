@@ -1,5 +1,14 @@
 # grpc-java
-GRPC implementation (server and client) using java. 
+GRPC implementation (server and client) using java.
+
+A part of grpc implementations:
+- java: https://github.com/rahumateo/grpc-java
+- python: https://github.com/rahumateo/grpc-python
+
+Note that as gRPC supports multi-language, you can run the server on one language and the client on the other.
+For more info, read on https://grpc.io/.
+
+
 For this example, there are two functionalities:
 1. Greetings. A simple function as seen in many tutorials for grpc
 2. A Flickr public photo feed. A (little bit more) complex functionality (in server side). Does not really matter in terms of `grpc` example, but it pretty much gives an idea about how it might work and the usage in "real" project.
@@ -17,5 +26,3 @@ Client
 ```
 src/main/java/FlickrFetcherClient.java
 ```
-
-As this is an implementation using gRPC, you can implement the client in another languages (that are supported by gRPC).
